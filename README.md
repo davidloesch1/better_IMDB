@@ -24,7 +24,7 @@ Movie database API which allows full CRUD actions on some of the models.  A key 
     - title
     - year_released
     - plot_description
-    - genre (fk)
+    - genre(s) (fk)
     - director(s) (fk)
     - actor(s) (fk)
 
@@ -43,7 +43,7 @@ Movie database API which allows full CRUD actions on some of the models.  A key 
 
 
 ## Next Steps
-     - Build a front-end to utilize the database
-     - Front-end can be similar to IMDB
-     - Include photos for the movies, directors, and actors
-     - Anything else you can think of!
+    - Build a front-end to utilize the database
+    - Front-end can be similar to IMDB
+    - Include photos for the movies, directors, and actors
+    - Anything else you can think of!
