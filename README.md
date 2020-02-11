@@ -15,9 +15,9 @@ Movie database API which allows full CRUD actions on some of the models.  A key 
     - `CREATE DATABASE better_imdb;`
     - `CREATE USER imdbuser WITH PASSWORD 'password'`;
     - `GRANT ALL PRIVILEGES ON DATABASE better_imdb TO imdbuser`;
+- Run the migrate command (`python3 manage.py migrate`)
+- Create superuser (`python3 manage.py createsuperuser`)
 - Start the server
-
-
 
 ## Models
 - Movie
