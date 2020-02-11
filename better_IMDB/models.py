@@ -6,21 +6,10 @@ class Genre(models.Model):
     def __str__(self):
         return self.genre_description
 
-class Movie(models.Model):
-    title = models.CharField(max_length=100)
-    year_released = models.IntegerField()
-    plot_description = models.TextField()
-    genre = models.ForeignKey(
-        Genre, on_delete=models.CASCADE, related_name='movie')
-    def __str__(self):
-        return self.title
-
 class Actor(models.Model):
     name = models.CharField(max_length=100)
     date_of_birth = models.DateField()
     country_of_birth = models.CharField(max_length=100)
-    movies = models.ForeignKey(
-        Movie, on_delete=models.CASCADE, related_name='actor')
 
     def __str__(self):
         return self.name
@@ -29,11 +18,21 @@ class Director(models.Model):
     name = models.CharField(max_length=100)
     date_of_birth = models.DateField()
     country_of_birth = models.CharField(max_length=100)
-    movies = models.ForeignKey(
-        Movie, on_delete=models.CASCADE, related_name='director')
 
     def __str__(self):
         return self.name
+
+class Movie(models.Model):
+    title = models.CharField(max_length=100)
+    year_released = models.IntegerField()
+    plot_description = models.TextField()
+    genre = models.ForeignKey(
+        Genre, on_delete=models.CASCADE, related_name='genre')
+    directors = models.ManyToManyField(
+        Director, related_name='movies')
+
+    def __str__(self):
+        return self.title
 
 
 
