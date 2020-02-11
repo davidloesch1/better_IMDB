@@ -5,7 +5,7 @@ class Genre(models.Model):
     genre_description = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.genre_description
 
 
 class Movie(models.Model):
@@ -43,5 +43,5 @@ class Movie_Person_Role(models.Model):
     movie_person_id = models.ForeignKey(
         Movie_Person, on_delete=models.CASCADE, related_name='movie_person_role')
 
-    def __str__(self):
-        return self.name
+    def __str__(Role):
+        return Role.role_description
