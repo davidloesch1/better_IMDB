@@ -20,27 +20,27 @@ Movie database API which allows full CRUD actions on some of the models.  A key 
 
 
 ## Models
--Movie
-    -title
-    -year_released
-    -plot_description
-    -genre (fk)
+- Movie
+    - title
+    - year_released
+    - plot_description
+    - genre (fk)
 
--Genre
-    -genre_description
+- Genre
+    - genre_description
 
--Movie_Person
-    -name
-    -dob
-    -country_of_birth
+- Movie_Person
+    - name
+    - dob
+    - country_of_birth
 
--Role
-    -role_description
+- Role
+    - role_description
 
--Movie_Person_Role
-    -role_id (fk)
-    -movie_id (fk)
-    -movie_person_id (fk)
+- Movie_Person_Role
+    - role_id (fk)
+    - movie_id (fk)
+    - movie_person_id (fk)
 
 
-#### Routes
+## Routes
