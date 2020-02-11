@@ -42,4 +42,8 @@ Movie database API which allows full CRUD actions on some of the models.  A key 
     - country_of_birth
 
 
-## Routes
+## Next Steps
+     - Build a front-end to utilize the database
+     - Front-end can be similar to IMDB
+     - Include photos for the movies, directors, and actors
+     - Anything else you can think of!
