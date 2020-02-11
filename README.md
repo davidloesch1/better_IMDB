@@ -3,7 +3,7 @@
 # Project Overview
 
 ## Project Description
-Movie database API which allows full CRUD actions on some of the models.  A key aspect of the database model is that a person's role on a movie is not stored on the movie directly, but in a "join" table which associates people, movies and roles.
+Movie database API which allows full CRUD actions on some of the models.  A key aspect of this database is that it utilizes the ManyToManyField functionality on Django to refer multiple movies to multiple actors and vice versa.  Additionally this backend is built using Django REST Framework.
 
 ## Project Links
 - [repo] (https://github.com/lilspikey333/better_IMDB)
@@ -25,22 +25,21 @@ Movie database API which allows full CRUD actions on some of the models.  A key 
     - year_released
     - plot_description
     - genre (fk)
+    - director(s) (fk)
+    - actor(s) (fk)
 
 - Genre
     - genre_description
 
-- Movie_Person
+- Actor
     - name
     - dob
     - country_of_birth
 
-- Role
-    - role_description
-
-- Movie_Person_Role
-    - role_id (fk)
-    - movie_id (fk)
-    - movie_person_id (fk)
+- Director
+    - name
+    - dob
+    - country_of_birth
 
 
 ## Routes

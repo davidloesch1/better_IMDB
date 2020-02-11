@@ -1,5 +1,5 @@
 from rest_framework import generics
-from .serializers import MovieSerializer, DirectorSerializer, ActorSerializer
+from .serializers import MovieSerializer, DirectorSerializer, ActorSerializer, GenreSerializer
 from .models import Movie, Director, Actor, Genre
 
 
@@ -32,10 +32,12 @@ class DirectorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Director.objects.all()
     serializer_class = DirectorSerializer
 
-# class GenreList(generics.ListCreateAPIView):
-#     queryset = Genre.objects.all()
-#     serializer_class = GenreSerializer
 
-# class GenreDetail(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Genre.objects.all()
-#     serializer_class = GenreSerializer
+class GenreList(generics.ListCreateAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+
+
+class GenreDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer

@@ -30,8 +30,8 @@ class Movie(models.Model):
     title = models.CharField(max_length=100)
     year_released = models.IntegerField()
     plot_description = models.TextField()
-    genre = models.ForeignKey(
-        Genre, on_delete=models.CASCADE, related_name='genre')
+    genres = models.ManyToManyField(
+        Genre, related_name='movies')
     directors = models.ManyToManyField(
         Director, related_name='movies')
     actors = models.ManyToManyField(

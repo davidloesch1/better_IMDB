@@ -9,5 +9,7 @@ urlpatterns = [
     path('directors/<int:pk>', views.DirectorDetail.as_view(),
          name='director_detail'),
     path('actors/', views.ActorList.as_view(), name='actor_list'),
-    path('actors/<int:pk>', views.ActorDetail.as_view(), name='actor_detail')
+    path('actors/<int:pk>', views.ActorDetail.as_view(), name='actor_detail'),
+    path('genres/', views.GenreList.as_view(), name='genre_list'),
+    path('genres/<int:pk>', views.GenreDetail.as_view(), name='genre_detail')
 ]
