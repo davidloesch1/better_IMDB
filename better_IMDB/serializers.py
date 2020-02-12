@@ -1,5 +1,8 @@
 from rest_framework import serializers
 from .models import Movie, Genre, Director, Actor
+# from django.contrib.auth import get_user_model
+# User = get_user_model()
+
 
 
 class DirectorSerializer(serializers.ModelSerializer):
@@ -59,19 +62,22 @@ class MovieSerializer(serializers.ModelSerializer):
     directors = serializers.HyperlinkedRelatedField(
         view_name='director_detail',
         many=True,
-        read_only=True
+        read_only=False,
+        queryset=Director.objects.all()
     )
 
     actors = serializers.HyperlinkedRelatedField(
         view_name='actor_detail',
         many=True,
-        read_only=True
+        read_only=False,
+        queryset=Actor.objects.all()
     )
 
     genres = serializers.HyperlinkedRelatedField(
         view_name='genre_detail',
         many=True,
-        read_only=True
+        read_only=False,
+        queryset=Genre.objects.all()
     )
 
     movie_url = serializers.ModelSerializer.serializer_url_field(
